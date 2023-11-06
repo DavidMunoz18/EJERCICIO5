@@ -8,8 +8,10 @@ namespace EJERCICIO5.Servicios
 {
     internal class MenuImplementacion : MenuInterfaz
     {
+        //Metodo para mostrar el menu y obtener la opcion del usuario.
         public int mostrarMenuYSeleccion()
         {
+            //Se imprime por pantalla un menu con distintas opciones.
             int numeroIntroducido;
             Console.WriteLine("#######################################");
             Console.WriteLine("0. cerrar menu");
@@ -19,6 +21,7 @@ namespace EJERCICIO5.Servicios
             return numeroIntroducido;
        
         }
+        //Metodo para solicitar al usuario un mes y devolverlo como numero.
         public int mes()
         {
             int n1;
@@ -28,6 +31,7 @@ namespace EJERCICIO5.Servicios
             return n1;
         
         }
+        //Metodo para solicitar al usuario un año y devolverlo como numero.
         public int anyo()
         {
             int n2;

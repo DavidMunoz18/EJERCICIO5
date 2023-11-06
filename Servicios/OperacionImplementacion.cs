@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace EJERCICIO5
 {
+    //Clase interna que implementa la interfaz OperacionInterfaz.
     internal class OperacionImplementacion : OperacionInterfaz
     {
+        // Método para determinar los días en un mes en un año bisiesto.
         public void Bisiesto(int mes)
         {
             if (mes == 1 | mes == 3 | mes == 5 | mes == 7 | mes == 8 | mes == 10 | mes == 12)
@@ -25,8 +27,8 @@ namespace EJERCICIO5
             }
         }
 
-  
 
+        // Método para determinar los días en un mes teniendo en cuenta si el año es bisiesto.
         public void dias(int anyo, int mes)
         {
             if (anyo % 4 == 0)
@@ -54,8 +56,8 @@ namespace EJERCICIO5
             }
         }
 
-       
 
+        // Método para determinar los días en un mes en un año no bisiesto.
         public void noBisiesto(int mes)
         {
             if (mes == 1 | mes == 3 | mes == 5 | mes == 7 | mes == 8 | mes == 10 | mes == 12)
