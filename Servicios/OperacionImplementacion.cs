@@ -7,28 +7,37 @@ using System.Threading.Tasks;
 
 namespace EJERCICIO5
 {
-    //Clase interna que implementa la interfaz OperacionInterfaz.
+    /// <summary>
+    /// Contiene la logica de las cabeceras de los metodos.
+    /// 071123 - dmp
+    /// </summary>
     internal class OperacionImplementacion : OperacionInterfaz
     {
-        // Método para determinar los días en un mes en un año bisiesto.
+        
         public void Bisiesto(int mes)
         {
             if (mes == 1 | mes == 3 | mes == 5 | mes == 7 | mes == 8 | mes == 10 | mes == 12)
             {
+                //Imprime por consola cuando el mes es bisiesto y tiene 31 dias
                 Console.WriteLine("El mes tiene 31 dias");
+                
             }
             else if (mes == 2)
             {
+                //Imprime por consola cuando febrero es bisiesto y tiene 29 dias
                 Console.WriteLine("El mes tiene 29 dias");
+                
             }
             else
             {
+                //Imprime por consola cuando el mes es bisiesto y tiene 30 dias
                 Console.WriteLine("El mes tiene 30 dias");
+                    
             }
         }
 
 
-        // Método para determinar los días en un mes teniendo en cuenta si el año es bisiesto.
+       
         public void dias(int anyo, int mes)
         {
             if (anyo % 4 == 0)
@@ -57,21 +66,44 @@ namespace EJERCICIO5
         }
 
 
-        // Método para determinar los días en un mes en un año no bisiesto.
         public void noBisiesto(int mes)
         {
             if (mes == 1 | mes == 3 | mes == 5 | mes == 7 | mes == 8 | mes == 10 | mes == 12)
             {
+                //Imprime por consola cuando el mes no es bisiesto y tiene 31 dias
                 Console.WriteLine("El mes tiene 31 dias");
+                
             }
             else if (mes == 2)
             {
+                //Imprime por consola cuando febrero no es bisiesto y tiene 28 dias
                 Console.WriteLine("El mes tiene 28 dias");
+                
             }
             else
             {
+                //Imprime por consola cuando el mes no es bisiesto y tiene 30 dias
                 Console.WriteLine("El mes tiene 30 dias");
             }
+
+        }
+        
+        public bool continuarOperacion()
+        {
+            //bucle para poder cerrar el menu o continuar con el.
+            bool cerrar = false;
+            Console.WriteLine("Si desea continuar pulse la tecla s");
+            string continua;
+            continua = Console.ReadLine();
+            if (continua != "s")
+            {
+                cerrar = true;
+            }
+            else
+            {
+                cerrar = false;
+            }
+            return cerrar;
         }
     }
 }
